@@ -68,7 +68,10 @@
 }
 
 .linkColumn {
-  margin-left: 1rem; /* Move the column slightly to the left */
+  margin-left: 22rem; /* Move the column slightly to the left */
+}
+.linkList li {
+  margin-bottom: 0.5rem; /* Add gap between list items */
 }
 
 
@@ -95,7 +98,7 @@
 }
 
 .link {
-  color: #9ca3af;
+  color: #EAEAEA;
   text-decoration: none;
   font-size: 0.9rem;
   line-height: 1.8;
@@ -116,7 +119,7 @@
 }
 
 .legalLink {
-  color: #9ca3af;
+  color: #EAEAEA;
   text-decoration: none;
   font-size: 0.8rem;
 }
@@ -170,5 +173,8 @@
   .legalLinks {
     flex-wrap: wrap;
     margin-bottom: 1rem;
+  }
+  .linkColumn {
+    margin-left: 1rem; /* Move the column slightly to the left */
   }
 }

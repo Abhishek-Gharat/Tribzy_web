@@ -152,13 +152,15 @@ main::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.5rem; /* Add padding to create white space around the content */
+  padding: 0.75rem; /* Add padding to create white space around the content */
+
 
 }
-
 .communityImage {
   width: 100%;
-  object-fit: cover;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 .communityInfo {
@@ -230,7 +232,7 @@ main::before {
   }
 
   .communityGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 5fr;
   }
 
   .viewMoreButton {
