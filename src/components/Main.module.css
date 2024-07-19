@@ -1,0 +1,308 @@
+/* Main.module.css */
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  background-color: #E7DEFF;
+  margin: 20px;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+  min-height: 600px;
+}
+
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(100% - 230px);
+  width: 400px;
+  height: 80px;
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 calc(100% - 70px));
+  z-index: 1;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 38rem;
+  margin-bottom: 2rem;
+}
+
+.heroContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.heroTitle {
+  font-size: 3.25rem;
+  font-weight: bold;
+  color: black;
+  text-align: right;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.orange, .yellow, .purple {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.orange {
+  background-color: #f97316;
+  color: black;
+}
+
+.yellow {
+  background-color: #eab308;
+  color: black;
+}
+
+.purple {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5.5rem; /* Increased font size */
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2; /* Adjusted line height for better readability */
+  text-align: center;
+  color: #9333ea;
+}
+
+
+.curvedHeader {
+  position: relative;
+  background-color: black;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px; 
+  margin: 0 auto;
+  margin-top: -10px;
+  width: 50%;
+  height: 90px;
+  top: 20px;
+  opacity: 1;
+  z-index: 2;
+  transition: width 0.5s ease, height 0.5s ease; /* Smooth transition */
+}
+
+.communitiesHeader {
+  height: 50px;
+  background-color: black;
+  margin-top: -20px;
+  z-index: 0;
+}
+
+.communitiesTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.communitiesSection {
+  background-color: black;
+  padding: 1rem;
+}
+
+.viewAllContainer {
+  text-align: right;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.viewAllLink {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.communities {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.communityCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem; /* Add padding to create white space around the content */
+
+}
+
+.communityImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.communityInfo {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.communityName {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 0.5rem 0;
+}
+
+.communityAddress {
+  color: #4b5563;
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.learnMore {
+  color: #9333ea;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.viewMoreContainer {
+  text-align: center;
+  margin-top: 2rem;
+  
+}
+
+.viewMoreButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #9333ea;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  width: auto;
+}
+
+@media (max-width: 968px) {
+  .main::before {
+    left: calc(100% - 80px);
+    width: 150px;
+    height: 60px;
+    border-radius: 0rem 0rem 0rem 0.5rem;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .curvedHeader {
+    width: 60%; /* Adjust width on smaller screens */
+    height: 70px; /* Adjust height if needed */
+    transition: width 0.5s ease, height 0.5s ease; /* Ensure smooth transition */
+  }
+
+  .communities {
+    padding: 2rem 1rem;
+  }
+
+  .communityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .viewMoreButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroImage {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .purple {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+   
+    line-height: 1.2; /* Adjusted line height for better readability */
+    text-align: center;
+    color: #9333ea;
+  }
+
+  .viewAllContainer {
+    display: block;
+  }
+
+  .communityCard {
+    flex-direction: row;
+    padding: 0rem;
+  }
+
+  .communityImage {
+    width:30%;
+    height: 100%;
+  }
+
+  .communityInfo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .communityName {
+    font-size: 1rem;
+  }
+
+  .communityAddress {
+    font-size: 0.8rem;
+  }
+
+  .learnMore {
+    font-size: 0.8rem;
+    align-self: flex-end;
+  }
+
+  .viewMoreButton {
+    background-color: #9333ea;
+    color: white;
+    width: 100%;
+  }
+}

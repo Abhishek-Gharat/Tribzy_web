@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.footer {
+  background-color: #222222;
+  color: white;
+  padding: 3rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: none;
+}
+
+.branding {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem; /* Adjust gap as needed */
+}
+
+.linkColumn {
+  margin-left: 1rem; /* Move the column slightly to the left */
+}
+
+
+/* Footer.module.css */
+
+/* Hide Quick Links heading by default */
+.linkTitle {
+  display: none; /* Hide the title by default */
+}
+
+@media (max-width: 768px) {
+  /* Show Quick Links heading on mobile */
+  .linkTitle {
+    display: block; /* Show the title on mobile */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
+
+.linkList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.legalLink {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.separator {
+  color: #9ca3af;
+}
+
+.copyright {
+  color: #9ca3af;
+  font-size: 0.8rem;
+  margin-top: -1.5rem; /* Move text up by reducing top margin */
+  text-align: right; /* Keep text aligned to the right */
+  width: 100%; /* Ensure it spans the full width */
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottom {
+   
+    border-top: 0px solid #444;
+   
+  }
+  .copyright {
+    margin-top: 0.5rem;
+    text-align: center; /* Center the text */
+  }
+
+  .branding {
+    display: none; /* Hide branding section on mobile */
+  }
+
+  .links {
+    flex-direction: row; /* Change to row for side-by-side on mobile */
+    justify-content: space-between; /* Ensure space between the columns */
+    gap: 1rem; /* Adjust gap for mobile */
+    width: 100%; /* Ensure full width for proper alignment */
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .legalLinks {
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+}
