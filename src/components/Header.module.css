@@ -80,71 +80,83 @@
   display: flex;
   gap: 1rem;
 }
+/* Header.module.css */
+.loginIcon {
+  display: none; /* Hide by default */
+}
+/* ... (keep all existing styles up to the media query) ... */
 
 @media (max-width: 968px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-top: -2rem;
+  }
+
+  .logoImage {
+    width: 30px;
+    margin-right: -0.1rem;
+    padding-left: 0.5rem;
+  }
+
+  .logoText {
+    font-size: 1.75rem;
+    margin-left: 0.5rem;
+  }
+
   .nav {
-    display: none; /* Hide navigation links on smaller screens initially */
-    flex-direction: column; /* Stack items vertically */
+    display: none;
+    flex-direction: column;
     position: absolute;
-    top: 80px; /* Adjust the top offset as needed */
+    top: 80px;
     left: 0;
-    width: 90%;
+    width: 100%;
     background-color: #ffffff;
-    transition: max-height 0.3s ease-out; /* Smooth transition */
+    transition: max-height 0.3s ease-out;
     overflow: hidden;
     max-height: 0;
   }
 
-    /* .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-    } */
-  
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-  
-    .logoImage {
-      width: 30px;
-      margin-right: -0.1rem;
-      margin-top: -2rem;
-   
-      padding-left: 0.5rem;
-
-    }
-  
-    .logoText {
-    
-      font-family: 'Poppins', sans-serif; /* Specify Poppins font */
-      font-size: 1.75rem; /* Consistent font size */
-      font-weight: bold;
-      color: black; /* Ensure text color is set */
-      margin-top: -2rem;
-    }
-  
-   
-
   .navOpen {
-    display: flex; /* Show the navigation menu when navOpen class is applied */
-    max-height: 500px; /* Adjust the maximum height for the menu */
-    transition: max-height 0.4s ease-in; /* Smooth transition */
+    display: flex;
+    max-height: 500px;
+    transition: max-height 0.4s ease-in;
     color: #ff1919;
   }
-  
+
   .menuIcon {
-    display: block; /* Show the menu icon on smaller screens */
+    display: block;
     color: #ffffff;
-    position: absolute; /* Position absolutely */
-    top: -5px; /* Adjust top position */
-    right: 20px; /* Adjust right position */
-    cursor: pointer; /* Add cursor pointer */
-    font-size: 1.5rem; /* Adjust font size if needed */
+    position: absolute;
+    top: -0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
   }
 
   .buttons {
-    display: none; /* Hide login and signup buttons initially on smaller screens */
+    display: none;
+  }
+
+  .loginIcon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: -0.5rem;
+    right: 6.5rem;
+  }
+
+  .loginIcon span {
+    margin-left: 5px;
+    font-size: 15px;
+    color: #8b5cf6;
   }
 }
