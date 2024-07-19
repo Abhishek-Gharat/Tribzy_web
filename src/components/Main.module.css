@@ -215,6 +215,13 @@ main::before {
     width: 150px;
     height: 60px;
     border-radius: 0rem 0rem 0rem 0.5rem;
+    
+  }
+  .main {
+ 
+    margin: 0px;
+  
+  
   }
 
   .heroTitle {
